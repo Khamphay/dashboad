@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 import 'package:fluent_ui/fluent_ui.dart';
 
 class MyCard extends Card {
