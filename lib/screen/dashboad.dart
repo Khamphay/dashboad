@@ -1,4 +1,3 @@
-
 import 'package:dashboad/component/card.dart';
 import 'package:dashboad/component/dot.dart';
 import 'package:dashboad/component/line_chart.dart';
@@ -141,11 +140,13 @@ class _DashboadScreenState extends State<DashboadScreen> {
   Widget buildTables({required double screenSize}) {
     return MyCard(
         child: SingleChildScrollView(
-      child: SizedBox(
-        width: isWinLinuxMac && screenSize > 700
-            ? 300
-            : MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height / 1.55,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: isWinLinuxMac && screenSize > 700
+              ? 300
+              : MediaQuery.of(context).size.width,
+          maxHeight: MediaQuery.of(context).size.height / 1.55,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

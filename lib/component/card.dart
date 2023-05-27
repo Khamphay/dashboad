@@ -25,7 +25,6 @@ class MyCard extends Card {
     return Padding(
       padding: paddings ?? const EdgeInsets.all(10),
       child: Card(
-        elevation: elevation,
         backgroundColor: color,
         padding: contentPadding ?? const EdgeInsets.all(10),
         borderRadius: BorderRadius.circular(borderRd ?? 10),
